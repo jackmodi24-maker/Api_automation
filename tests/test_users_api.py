@@ -39,14 +39,14 @@ def test_create_users(api_client,load_user_data):
 
 def test_update_users(api_client):
     user_data = {
-        "name": "prasanth k",
-        "username":"qa user",
-        "email":"test@gmail.com"
+        "name": "David Greg",
+        "username":"David",
+        "email":"david@gmail.com"
     }
     response = api_client.put("users/1", user_data)
     print(response.json())
     assert response.status_code == 200
-    assert response.json()['name'] == 'prasanth k'
+    assert response.json()['name'] == 'David'
 
 
 def test_delete_users(api_client):
